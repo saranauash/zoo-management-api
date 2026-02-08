@@ -17,7 +17,7 @@ public class AnimalService {
     public Animal getAnimalById(Long id) { return animalRepository.findById(id).orElse(null); }
     public Animal addAnimal(Animal animal) { return animalRepository.save(animal); }
 
-    // ИСПРАВЛЕННЫЙ МЕТОД ОБНОВЛЕНИЯ
+
     public Animal updateAnimal(Long id, Animal animalDetails) {
         return animalRepository.findById(id).map(animal -> {
             animal.setName(animalDetails.getName());
@@ -26,7 +26,7 @@ public class AnimalService {
             animal.setImageUrl(animalDetails.getImageUrl());
             animal.setDescription(animalDetails.getDescription());
 
-            // ОБЯЗАТЕЛЬНО: добавляем обновление диеты
+
             animal.setDiet(animalDetails.getDiet());
 
             return animalRepository.save(animal);

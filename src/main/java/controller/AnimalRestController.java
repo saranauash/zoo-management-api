@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/animals")
-@CrossOrigin(origins = "*") // Позволяет фронтенду делать запросы к API
+@CrossOrigin(origins = "*")
 public class AnimalRestController {
 
     private final AnimalService animalService;
@@ -37,20 +37,20 @@ public class AnimalRestController {
         }
     }
 
-    // POST: Добавить новое животное
+
     @PostMapping
     public Animal addAnimal(@RequestBody Animal animal) {
         return animalService.addAnimal(animal);
     }
 
-    // PUT: Обновить существующее животное
+
     @PutMapping("/{id}")
     public ResponseEntity<Animal> updateAnimal(@PathVariable Long id, @RequestBody Animal animal) {
         Animal updatedAnimal = animalService.updateAnimal(id, animal);
         return ResponseEntity.ok(updatedAnimal);
     }
 
-    // DELETE: Удалить животное
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAnimal(@PathVariable Long id) {
         animalService.deleteAnimal(id);

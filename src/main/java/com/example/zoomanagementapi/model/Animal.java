@@ -35,7 +35,7 @@ public class Animal {
 
     public Animal() {}
 
-    // Getters and Setters
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
@@ -49,7 +49,7 @@ public class Animal {
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
-    // Геттер и Сеттер для Diet
+
     public String getDiet() { return diet; }
     public void setDiet(String diet) { this.diet = diet; }
 

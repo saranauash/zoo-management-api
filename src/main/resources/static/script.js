@@ -1,6 +1,5 @@
 const apiUrl = '/api/animals';
 
-// 1. Загрузка животных и отрисовка карточек
 async function loadAnimals() {
     try {
         const response = await fetch(apiUrl);
@@ -51,7 +50,6 @@ async function loadAnimals() {
     }
 }
 
-// 2. Модальное окно (теперь берет диету из базы данных)
 function openModal(animal) {
     const modal = document.getElementById('animalModal');
     const modalImg = document.getElementById('modalImg');
@@ -84,7 +82,6 @@ function openModal(animal) {
     modal.style.display = 'block';
 }
 
-// 3. Сохранение / Обновление (включая поле DIET)
 document.getElementById('animal-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -117,7 +114,6 @@ document.getElementById('animal-form').addEventListener('submit', async (e) => {
     }
 });
 
-// 4. Удаление
 async function deleteAnimal(id) {
     if (confirm('Are you sure you want to delete this animal?')) {
         try {
@@ -129,7 +125,6 @@ async function deleteAnimal(id) {
     }
 }
 
-// 5. Редактирование (заполняем поле DIET)
 function editAnimal(animal) {
     document.getElementById('animal-id').value = animal.id;
     document.getElementById('name').value = animal.name;
