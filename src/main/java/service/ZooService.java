@@ -26,7 +26,7 @@ public class ZooService {
     }
 
     public Zoo updateZoo(Long id, Zoo zoo) {
-        zoo.setZooId(id);
+        zoo.setId(id); // Исправлено: было setZooId(id)
         return zooRepository.save(zoo);
     }
 

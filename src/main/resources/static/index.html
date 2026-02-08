@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Management Deluxe</title>
+    <link rel="stylesheet" href="style.css?v=1001">
+</head>
+<body>
+<header>
+    <h1>🐾 Zoo Management Deluxe!</h1>
+    <p>Monitoring Nutrition & Staff for: Giraffes, Elephants, Tigers, and more!</p>
+</header>
+
+<section class="admin-panel">
+    <h2>Manage Zoo Animals</h2>
+    <form id="animal-form">
+        <input type="hidden" id="animal-id">
+
+        <div class="form-row">
+            <input type="text" id="name" placeholder="Animal Name (e.g. Simba)" required>
+            <input type="text" id="species" placeholder="Species (e.g. Rare White Tiger)" required>
+        </div>
+
+        <div class="form-row">
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="imageUrl" placeholder="Image URL (https://...)">
+        </div>
+
+        <div class="form-row">
+            <input type="text" id="diet" placeholder="Diet Plan (e.g. Fresh meat, 5kg daily)" required>
+        </div>
+
+        <textarea id="description" placeholder="Write a short biography about this animal..."></textarea>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn-save">Save Animal</button>
+            <button type="button" onclick="resetForm()" class="btn-clear">Clear Form</button>
+        </div>
+    </form>
+</section>
+
+<main id="animal-grid" class="grid"></main>
+
+<div id="animalModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modalImg" src="" alt="Animal Photo">
+            <div class="modal-text">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js?v=1001"></script>
+</body>
+</html>

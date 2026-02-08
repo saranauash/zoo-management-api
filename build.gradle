@@ -23,7 +23,6 @@ dependencies {
     implementation 'org.postgresql:postgresql'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    // Thymeleaf обычно не нужен для чистого REST API, но если он требуется по заданию — оставляем
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

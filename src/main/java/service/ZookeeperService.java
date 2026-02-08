@@ -26,7 +26,7 @@ public class ZookeeperService {
     }
 
     public Zookeeper updateZookeeper(Long id, Zookeeper zookeeper) {
-        zookeeper.setZookeeperId(id);
+        zookeeper.setId(id); // Исправлено: было setZookeeperId(id)
         return zookeeperRepository.save(zookeeper);
     }
 
