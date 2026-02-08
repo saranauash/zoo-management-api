@@ -20,11 +20,9 @@ public class Animal {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    // НОВОЕ ПОЛЕ: Питание
     private String diet;
 
-    // Если Zoo и Zookeeper тебе пока не нужны во фронтенде,
-    // их можно оставить, но Diet критически важен.
+
     @ManyToOne
     @JoinColumn(name = "zoo_id")
     private Zoo zoo;
